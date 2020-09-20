@@ -175,6 +175,16 @@ export class FlatpickrDirective
    * The minimum date that a user can start picking from (inclusive).
    */
   @Input() minDate: string | Date;
+    
+    /**
+   * The maximum time that a user can pick to (inclusive).
+   */
+  @Input() maxTime: string | Date | number;
+
+  /**
+   * The minimum time that a user can start picking from (inclusive).
+   */
+  @Input() minTime: string | Date | number;
 
   /**
    * Adjusts the step for the minute input (incl. scrolling).
@@ -361,6 +371,8 @@ export class FlatpickrDirective
       inline: this.inline,
       maxDate: this.maxDate,
       minDate: this.minDate,
+       maxTime: this.maxDate,
+      minTime: this.minDate,
       minuteIncrement: this.minuteIncrement,
       mode: this.mode,
       nextArrow: this.nextArrow,
